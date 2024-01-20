@@ -45,8 +45,6 @@ const Body = () => {
     setSelectedCourse(course);
   };
 
-  console.log("Filtered Courses:", filteredCourses);
-
   return (
     <Container>
       <Grid marginTop={3} marginLeft={2} xs={100}>
