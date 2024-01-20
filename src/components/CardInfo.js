@@ -1,14 +1,14 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const CardInfo = ({ course }) => {
+const CardInfo = ({ course, onClick }) => {
   const { name, description, thumbnail } = course;
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} onClick={() => onClick(course)}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -28,4 +28,5 @@ const CardInfo = ({ course }) => {
     </Card>
   );
 };
+
 export default CardInfo;

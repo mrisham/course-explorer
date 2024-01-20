@@ -10,7 +10,7 @@ const SearchBar = ({ width, onSearch }) => {
   const handleSearchChange = (event) => {
     const newSearchValue = event.target.value;
     setSearchValue(newSearchValue);
-    onSearch(newSearchValue); // Call the onSearch prop with the updated value
+    onSearch(newSearchValue); // Calls the onSearch prop with the updated value
   };
 
   return (
