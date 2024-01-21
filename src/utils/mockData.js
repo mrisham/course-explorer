@@ -239,7 +239,7 @@ const mockData = [
   // Course 6
   {
     id: 6,
-    name: "Full-Stack JavaScript Development",
+    name: "Full-Stack JS Development",
     instructor: "Zoe Adams",
     description:
       "Comprehensive course covering both frontend and backend JavaScript development.",
@@ -358,7 +358,7 @@ const mockData = [
     id: 9,
     name: "Game Development with Unity",
     instructor: "Aiden Wilson",
-    description: "Learn game development using the Unity game engine.",
+    description: "Learn making games using the Unity game engine.",
     enrollmentStatus: "Open",
     thumbnail: "https://img-b.udemycdn.com/course/750x422/2514486_c4e0.jpg",
     duration: "12 weeks",
@@ -549,7 +549,7 @@ const mockData = [
   // Course 14
   {
     id: 14,
-    name: "iOS App Development with Swift",
+    name: "iOS Development with Swift",
     instructor: "Jordan Clark",
     description:
       "Learn iOS app development using the Swift programming language.",
