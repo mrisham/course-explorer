@@ -358,7 +358,8 @@ const mockData = [
     id: 9,
     name: "Unity Game Development",
     instructor: "Aiden Wilson",
-    description: "Learn making games using the Unity.",
+    description:
+      "An introduction to the basics of game development with unity.",
     enrollmentStatus: "Open",
     thumbnail: "https://img-b.udemycdn.com/course/750x422/2514486_c4e0.jpg",
     duration: "12 weeks",
