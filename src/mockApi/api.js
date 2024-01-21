@@ -1,6 +1,6 @@
 import { createServer, Model } from "miragejs";
 import mockData from "../utils/mockData";
-export function makeServer({ environment = "test" } = {}) {
+export function makeServer({ environment = "production" } = {}) {
   let server = createServer({
     environment,
     models: {
