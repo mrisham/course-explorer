@@ -4,14 +4,13 @@ import { setCourse } from "../utils/courseSlice";
 import Container from "@mui/material/Container";
 import CardInfo from "./CardInfo";
 import SearchBar from "./SearchBar";
-import CourseModal from "./CourseModal";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const dispatch = useDispatch();
   const courseData = useSelector((state) => state.course.data);
   const [filteredCourses, setFilteredCourses] = useState(courseData);
-  const [selectedCourse, setSelectedCourse] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,11 +39,6 @@ const Body = () => {
     setFilteredCourses(filtered);
   };
 
-  const handleCardClick = (course) => {
-    console.log("Selected Course:", course);
-    setSelectedCourse(course);
-  };
-
   return (
     <Container>
       <Grid marginTop={3} marginLeft={2} xs={100}>
@@ -61,17 +55,15 @@ const Body = () => {
         }}
       >
         {filteredCourses.map((course) => (
-          <CardInfo key={course.id} course={course} onClick={handleCardClick} />
+          <Link
+            to={`/course/${course.id}`}
+            key={course.id}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <CardInfo course={course} />
+          </Link>
         ))}
       </Container>
-
-      {selectedCourse && (
-        <CourseModal
-          isOpen={!!selectedCourse}
-          handleClose={() => setSelectedCourse(null)}
-          course={selectedCourse}
-        />
-      )}
     </Container>
   );
 };

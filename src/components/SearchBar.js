@@ -1,4 +1,3 @@
-// src/components/SearchBar.js
 import React, { useState } from "react";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";

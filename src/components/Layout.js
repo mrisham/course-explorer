@@ -1,21 +1,23 @@
+// Layout.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Header";
-import { Grid } from "@mui/material";
 import Body from "./Body";
+import CourseDetails from "./CourseDetails";
+import StudentDashboard from "./StudentDashboard";
 
 const Layout = () => {
   return (
-    <Grid container spacing={0}>
-      <Grid item xs={100}>
-        <item>
-          <Header />
-        </item>
-      </Grid>
-      <Grid marginTop={1} marginLeft={0} xs={100}>
-        <item>
-          <Body />
-        </item>
-      </Grid>
-    </Grid>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/course/:id" element={<CourseDetails />} />
+          <Route path="/dashboard" element={<StudentDashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

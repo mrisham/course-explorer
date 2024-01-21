@@ -6,6 +6,9 @@ const mockData = [
     description:
       "Learn the basics of React Native development and build your first mobile app.",
     enrollmentStatus: "Open",
+    enrolled: "true",
+    progress: "30%",
+    dueDate: "31-01-2024",
     thumbnail:
       "https://miro.medium.com/v2/resize:fit:1024/1*QY5S4senfFh-mIViSi5A_Q.png",
     duration: "8 weeks",
@@ -52,6 +55,9 @@ const mockData = [
     duration: "8 weeks",
     schedule: "Mondays and Wednesdays, 6:30 PM - 8:30 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic Python knowledge"],
     syllabus: [
       {
@@ -88,6 +94,9 @@ const mockData = [
     duration: "12 weeks",
     schedule: "Wednesdays and Fridays, 5:00 PM - 7:00 PM",
     location: "Online",
+    enrolled: "true",
+    progress: "70%",
+    dueDate: "25-02-2024",
     prerequisites: ["Basic knowledge of statistics"],
     syllabus: [
       {
@@ -123,6 +132,9 @@ const mockData = [
     duration: "4 weeks",
     schedule: "Mondays and Thursdays, 6:30 PM - 8:30 PM",
     location: "In-Person",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic understanding of web technologies"],
     syllabus: [
       {
@@ -159,6 +171,9 @@ const mockData = [
     duration: "10 weeks",
     schedule: "Tuesdays and Fridays, 7:00 PM - 9:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic programming knowledge"],
     syllabus: [
       {
@@ -195,6 +210,9 @@ const mockData = [
     duration: "6 weeks",
     schedule: "Thursdays, 6:00 PM - 8:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic knowledge of UI/UX design"],
     syllabus: [
       {
@@ -231,6 +249,9 @@ const mockData = [
     duration: "14 weeks",
     schedule: "Wednesdays and Saturdays, 5:30 PM - 7:30 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Intermediate JavaScript knowledge"],
     syllabus: [
       {
@@ -267,6 +288,9 @@ const mockData = [
     duration: "8 weeks",
     schedule: "Mondays and Thursdays, 6:00 PM - 8:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic understanding of computer networks"],
     syllabus: [
       {
@@ -298,6 +322,9 @@ const mockData = [
     description:
       "Learn effective digital marketing strategies for online businesses.",
     enrollmentStatus: "Closed",
+    enrolled: "true",
+    progress: "99%",
+    dueDate: "29-01-2024",
     thumbnail:
       "https://img.etimg.com/thumb/width-1600,height-900,imgsize-1309160,resizemode-75,msid-102779211/jobs/mid-career/what-is-a-digital-marketing-agency.jpg",
     duration: "10 weeks",
@@ -337,6 +364,9 @@ const mockData = [
     duration: "12 weeks",
     schedule: "Wednesdays and Saturdays, 4:00 PM - 6:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic understanding of programming"],
     syllabus: [
       {
@@ -373,6 +403,9 @@ const mockData = [
     duration: "8 weeks",
     schedule: "Mondays and Thursdays, 7:00 PM - 9:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic programming knowledge"],
     syllabus: [
       {
@@ -410,6 +443,9 @@ const mockData = [
     schedule: "Tuesdays and Fridays, 6:30 PM - 8:30 PM",
     location: "Online",
     prerequisites: ["Basic design knowledge"],
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     syllabus: [
       {
         week: 1,
@@ -446,6 +482,9 @@ const mockData = [
     schedule: "Wednesdays and Saturdays, 5:00 PM - 7:00 PM",
     location: "Online",
     prerequisites: ["Basic understanding of networking"],
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     syllabus: [
       {
         week: 1,
@@ -481,6 +520,9 @@ const mockData = [
     duration: "8 weeks",
     schedule: "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic knowledge of HTML and JavaScript"],
     syllabus: [
       {
@@ -517,6 +559,9 @@ const mockData = [
     duration: "12 weeks",
     schedule: "Mondays and Wednesdays, 7:30 PM - 9:30 PM",
     location: "Online",
+    enrolled: "false",
+    progress: "NA",
+    dueDate: "NA",
     prerequisites: ["Basic programming knowledge"],
     syllabus: [
       {
