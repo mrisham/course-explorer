@@ -1,4 +1,3 @@
-// src/redux/notesSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const courseSlice = createSlice({

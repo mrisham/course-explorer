@@ -46,7 +46,6 @@ const CourseDetails = () => {
         Pre-requisites: {selectedCourse.prerequisites.join(", ")}
       </Typography>
 
-      {/* Adding Curriculum in Accordion */}
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ mt: 3 }}>
           Course Curriculum
