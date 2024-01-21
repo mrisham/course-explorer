@@ -6,8 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { makeServer } from "./mockApi/api";
 // mockServer();
 
-if (process.env.NODE_ENV === "development") {
-  makeServer({ environment: "development" });
+if (process.env.NODE_ENV === "production") {
+  makeServer({ environment: "production" });
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
