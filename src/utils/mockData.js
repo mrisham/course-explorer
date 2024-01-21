@@ -356,7 +356,7 @@ const mockData = [
   // Course 9
   {
     id: 9,
-    name: "Game Development with Unity",
+    name: "Unity Game Development",
     instructor: "Aiden Wilson",
     description: "Learn making games using the Unity.",
     enrollmentStatus: "Open",
