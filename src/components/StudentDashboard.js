@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 import LinearProgress from "@mui/material/LinearProgress";
 import Button from "@mui/material/Button";
 import { setCourse } from "../utils/courseSlice";
@@ -40,35 +42,52 @@ const StudentDashboard = () => {
     }));
   };
 
+  const studentDetails = {
+    name: "John Doe",
+    memberSince: "January 1, 2022",
+    studentId: "123456",
+  };
+
   return (
     <Container>
+      <Box mt={4}>
+        <Paper elevation={3} sx={{ padding: 2, marginBottom: 4 }}>
+          <h2>Welcome, {studentDetails.name}!</h2>
+          <p>Member Since: {studentDetails.memberSince}</p>
+          <p>Student ID: {studentDetails.studentId}</p>
+        </Paper>
+      </Box>
+
       <h2>Your Enrolled Courses</h2>
       {enrolledCourses.map((course) => (
-        <div key={course.id}>
-          <h3>{course.name}</h3>
-          <p>Instructor: {course.instructor}</p>
-          <img
-            src={course.thumbnail}
-            alt={course.name}
-            style={{ maxWidth: "100px" }}
-          />
-          <p>Due Date: {course.dueDate}</p>
-          <LinearProgress
-            variant="determinate"
-            value={
-              completedCourses[course.id] ? 100 : parseInt(course.progress, 10)
-            }
-          />
-          <Button
-            variant={completedCourses[course.id] ? "contained" : "outlined"}
-            onClick={() => handleMarkAsCompleted(course.id)}
-            style={{ marginTop: "10px" }} // Add this line to set margin top
-          >
-            {completedCourses[course.id] ? "Completed" : "Mark as Completed"}
-          </Button>
-
-          <hr />
-        </div>
+        <Box key={course.id} mb={4}>
+          <Paper elevation={3} sx={{ padding: 2 }}>
+            {/* Rest of your course details rendering */}
+            <h3>{course.name}</h3>
+            <p>Instructor: {course.instructor}</p>
+            <img
+              src={course.thumbnail}
+              alt={course.name}
+              style={{ maxWidth: "100px", marginBottom: "8px" }}
+            />
+            <p>Due Date: {course.dueDate}</p>
+            <LinearProgress
+              variant="determinate"
+              value={
+                completedCourses[course.id]
+                  ? 100
+                  : parseInt(course.progress, 10)
+              }
+              sx={{ marginBottom: 2 }}
+            />
+            <Button
+              variant={completedCourses[course.id] ? "contained" : "outlined"}
+              onClick={() => handleMarkAsCompleted(course.id)}
+            >
+              {completedCourses[course.id] ? "Completed" : "Mark as Completed"}
+            </Button>
+          </Paper>
+        </Box>
       ))}
     </Container>
   );

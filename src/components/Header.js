@@ -7,7 +7,6 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -15,7 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [];
-const settings = ["Dashboard", "Log Out"];
+const settings = ["Dashboard"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -42,7 +41,7 @@ function Header() {
         <Toolbar disableGutters>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <MouseIcon
-              sx={{ display: { xs: "none", md: "flex" }, mr: 1, ml: 5 }}
+              sx={{ display: { xs: "flex", md: "flex" }, mr: 1, ml: 5 }}
             />
             <Typography
               variant="h6"
@@ -50,7 +49,7 @@ function Header() {
               component="span"
               sx={{
                 mr: 2,
-                display: { xs: "none", md: "flex" },
+                display: { xs: "flex", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
@@ -70,36 +69,7 @@ function Header() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              <MenuItem
-                component={Link}
-                to="/dashboard"
-                onClick={handleCloseNavMenu}
-              >
-                <Typography textAlign="center">Dashboard</Typography>
-              </MenuItem>
-              {/* Add other menu items as needed */}
-            </Menu>
+            ></IconButton>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -137,8 +107,14 @@ function Header() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem
+                  key={setting}
+                  component={Link}
+                  to="/dashboard"
+                  onClick={handleCloseUserMenu}
+                  sx={{ textAlign: "center" }}
+                >
+                  {setting}
                 </MenuItem>
               ))}
             </Menu>

@@ -45,7 +45,7 @@ const mockData = [
   },
   {
     id: 2,
-    name: "Intermediate Python Programming",
+    name: "Python Programming",
     instructor: "Emily Davis",
     description:
       "Deepen your Python skills with advanced concepts and projects.",
