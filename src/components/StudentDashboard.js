@@ -62,9 +62,11 @@ const StudentDashboard = () => {
           <Button
             variant={completedCourses[course.id] ? "contained" : "outlined"}
             onClick={() => handleMarkAsCompleted(course.id)}
+            style={{ marginTop: "10px" }} // Add this line to set margin top
           >
             {completedCourses[course.id] ? "Completed" : "Mark as Completed"}
           </Button>
+
           <hr />
         </div>
       ))}
